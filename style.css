@@ -15,8 +15,35 @@ body{
     line-height:1.6;
 }
 
-/* NAVBAR */
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:#00ff9d;
+    filter:blur(250px);
+    opacity:0.08;
 
+    top:-200px;
+    right:-100px;
+
+    z-index:-3;
+}
+/* NAVBAR */
+.cyber-grid{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:
+    linear-gradient(rgba(0,255,157,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,157,0.05) 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    z-index:-2;
+}
 .navbar{
     display:flex;
     justify-content:space-between;
