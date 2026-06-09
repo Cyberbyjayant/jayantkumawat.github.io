@@ -111,25 +111,28 @@ body::before{
 
 .hero h1{
 
-    font-size:72px;
+    font-size:120px;
+    font-weight:900;
+    letter-spacing:4px;
+
     margin-top:20px;
-    margin-bottom:15px;
+    margin-bottom:30px;
 
     background:linear-gradient(
         90deg,
         #00ff9d,
-        #ffffff,
-        #00ff9d
+        #b8fff1,
+        #ffffff
     );
-
-    background-size:200% auto;
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
+    text-shadow:
+        0 0 30px rgba(0,255,157,0.25);
+
     animation:glowText 5s linear infinite;
 }
-
 @keyframes glowText{
 
     0%{
@@ -370,4 +373,11 @@ footer{
         flex-wrap:wrap;
         justify-content:center;
     }
+}
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:60px;
+    }
+
 }
