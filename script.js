@@ -36,3 +36,20 @@ if(footer){
     footer.innerHTML =
     `© ${new Date().getFullYear()} Jayant Kumawat | Enterprise Cybersecurity Professional`;
 }
+const text = "JAYANT KUMAWAT";
+
+let i = 0;
+
+function typeEffect(){
+
+    if(i < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeEffect,120);
+    }
+}
+
+typeEffect();
