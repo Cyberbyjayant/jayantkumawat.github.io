@@ -124,36 +124,43 @@ body::before{
 
 .hero h1{
 
-    font-size:120px;
-    font-weight:900;
-    letter-spacing:4px;
+    font-size:80px;
+    font-weight:800;
+    letter-spacing:2px;
 
     margin-top:20px;
-    margin-bottom:30px;
+    margin-bottom:20px;
 
     background:linear-gradient(
         90deg,
         #00ff9d,
-        #b8fff1,
-        #ffffff
+        #7fffd4,
+        #ffffff,
+        #7fffd4,
+        #00ff9d
     );
 
+    background-size:300% auto;
+
     -webkit-background-clip:text;
+    background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    text-shadow:
-        0 0 30px rgba(0,255,157,0.25);
+    filter:drop-shadow(
+        0 0 12px rgba(0,255,157,0.25)
+    );
 
-    animation:glowText 5s linear infinite;
+    animation:glowText 16s linear infinite;
 }
+
 @keyframes glowText{
 
     0%{
-        background-position:0%;
+        background-position:0% center;
     }
 
     100%{
-        background-position:200%;
+        background-position:300% center;
     }
 
 }
@@ -386,11 +393,4 @@ footer{
         flex-wrap:wrap;
         justify-content:center;
     }
-}
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:60px;
-    }
-
 }
